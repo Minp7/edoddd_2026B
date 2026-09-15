@@ -1,1 +1,2 @@
-# edoddd_2026A
+# ESTRUCTURA Y ORGANIZACION DE DATOS 
+![img](/reosurces/image.png)
