@@ -27,7 +27,7 @@ for number in range(1,n+1):
     #3: sum<- 3 + 3
     #...
     #100: sum <- sum_(-1) + 100
-print(f"La suma de 1 hasta {n} es: {total_sum}")
+print(f"La suma de 1 hasta {3500} es: {total_sum}")
 
 #tomando el tiempo final
 timestamp_02 = time.time()
