@@ -20,4 +20,3 @@ Estructuras no lineales
 *Unidad 4*
 Métodos de ordenamiento y búsqueda
 
-fer te amo 
