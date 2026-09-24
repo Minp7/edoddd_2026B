@@ -8,29 +8,47 @@ calculara la suma del 1 al 100
 # importamos biblioteca time
 import time
 
-#creando una marca de tiempo
-timestamp_01 = time.time()
+# Funcion k suma los  
+# primeros "n" numeros naturales 
+def sum_of_n(n):
+    total_sum = 0
+    
+    #Sumando los "n" numeros 
+    #ciclo for
+    for number in range(1,n+1):
+      total_sum = total_sum + number
+      #Retornando el total de la suma 
+      return total_sum 
+   # variable para gaurdar 
+   # el data set 
+    
+    dataset =[]#[(n,time,sum),()]
+    #generando el contenido del data set 
+    for repetition in range(1,11):
+      #Tomo el tiempo 
+      #creando una marca de tiempo
+      timestamp_01 = time.time()
+      #suma de los n numeros 
+      n = repetition*500 
+      #Guardo el resultado en results 
+      result = sum_of_n(n)
 
-#programa que calcula las sumas
-# de los "n" numeros naturales
-n = 100
-total_sum = 0
 
-#ciclo for
-for number in range(1,n+1):
+     #tomando el tiempo final
+    timestamp_02 = time.time()
 
-    total_sum = total_sum + number
-    #1: sum<- 0 + 1
-    # sum = 1
-    #2: sum<- 1 + 2
-    # sum = 3
-    #3: sum<- 3 + 3
-    #...
-    #100: sum <- sum_(-1) + 100
-print(f"La suma de 1 hasta {3500} es: {total_sum}")
+     #Calculando el tiempo 
+    elapsed_time= round ((timestamp_02-timestamp_01) * 1e6,2) 
+   
+     #Agregar la tripleta de los 
+     #datos a dataset 
+    dataset.append((n,elapsed_time,result))
+   #imprimir dataset 
+   #imprimir el dataset
+for tup in dataset:
+   print(tup)
 
-#tomando el tiempo final
-timestamp_02 = time.time()
 
-#impresion del tiempo de ejecucion
-print(f"Tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6:.2f} μs")
+
+
+
