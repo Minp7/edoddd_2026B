@@ -7,12 +7,16 @@ def random_function(students):
     new_list = [] # O(1)
 
     for student in students:
-        total += 1 # O(1)
-        new_list.append(student) # O(1)
+        print("Se le suma 1 al total")
+        total += 1 # O(n)
+        new_list.append(student) # O(n)
 
-    print(new_list) # O(n)
+    print("Imprimiendo estudiantes")
+    print(new_list) # O(1)
     return total # O(1)
 
+print(f"Tamaño de la lista: {len(student_list_01)}") 
 print(random_function(student_list_01))
+print("") 
 
-# Calcular O(n)
+# Calcular O(2n)+O(5)= O(2n+5) = O(n)
