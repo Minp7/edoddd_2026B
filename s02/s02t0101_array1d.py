@@ -1,24 +1,44 @@
-# Importando el modulo Arrays
-#from array import array as arr
-#from array import *
+# array
+# from array import *
 import array as arr
 
-# Creacion de un arreglo
-# i: Entero con signo
-# I: Entero sin signo
-# f: Numero decimal
-# d: Numero decimal doble 
-# u: Carácteres unicode
-my_array = arr.array('i',[10,22,300,3,7,40,55,80,700,654,34])
+#creacion de un arreglo
+# 1: entero con signo
+# I: entero sin signo
+# f: numero decimal
+# d: numero decimal doble
+# u: carcateres unicode
+my_array = arr.array('i',[10,22,300,3,7,40,55,200,700,654,35])
 
-# Busqueda de un elemento
+# iteracion automatica
+#for num in  my_array:
+#  print(num)
+
+# acceso individual a los elementos
+#print(my_array[0]) # primer elemento
+#print(my_array[1]) # segundo elemento   
+#print(my_array[1]) # tercer elemento  
+
+# tamaño de un arreglo
+# Length
+#print(len[my_array])
+
+# iteracion por indices
+#for i in range(len(my_array)):
+   # if my_array [i] % 2 == 0:
+    #   print(f"elemeto num {i+1}:{my_array[i]}")
+
+#Busqueda de un elemento
 num_to_search = 200
-
-# Modificando un valor usando
-# backet notation
-my_array[7] = 200
-
+#modificando un valor
+my_array[7]=200
 try:
-  print(f"Localizado {num_to_search}: {my_array.index(num_to_search)}")
+    print(f"localizando (num_to_search): {my_array.index(num_to_search)}")
 except:
-  print("⚠️ Numero no encontrado!!!")
+ print(" numero no encontrado ")
+
+# Asignando valor en un indice que no existe
+try:
+    my_array[100]=3
+except IndexError:
+    print(" Indice no existe")
